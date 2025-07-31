@@ -1,10 +1,13 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-    <h1>welcome to git</h1>
+     
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+       <h1>Welcome to Git Hub</h1>
+       <h2>App page chnaged</h2>
     </div>
   );
 }
