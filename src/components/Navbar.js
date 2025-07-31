@@ -20,25 +20,7 @@ const Navbar=()=>{
       </li>
       <li className="nav-item">
         <Link className="nav-link" to="/About">About</Link>
-      </li>
-       <li className="nav-item">
-        <Link className="nav-link" to="/Services">Services</Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link" to="/Products">Products</Link>
-      </li>
-       <li className="nav-item">
-        <Link className="nav-link" to="/Industries">Industries</Link>
-      </li>
-       <li className="nav-item">
-        <Link className="nav-link" to="/Studies">Case Studies</Link>
-      </li>
-       <li className="nav-item">
-        <Link className="nav-link" to="/Technologies">Technologies</Link>
-      </li>
-       <li className="nav-item">
-        <Link className="nav-link" to="/Insights">Insights</Link>
-      </li>
+       </li>
        <li className="nav-item">
         <Link className="nav-link" to="/Careers">Careers</Link>
       </li>
@@ -46,19 +28,6 @@ const Navbar=()=>{
         <Link className="nav-link" to="/Contact">Contact</Link>
       </li>
        </ul>
-      <ul className="navbar-nav ms-auto">
-     
-      <li className="nav-item">
-        <Link className="nav-link" to="/Login">Login</Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link" to="/Signup">Signup</Link>
-      </li>
-       <li className="nav-item">
-        <Link className="nav-link" to="/Search">Search</Link>
-      </li>
-     
-    </ul>
          </div>
          </div>
          </nav>

@@ -1,10 +1,6 @@
 import React  from 'react';
 
 import Navbar from '../components/Navbar.js';
-// import PostsList from './PostsList';
-// import { Dataa } from './Details.js';
-
-
 import Footer from  '../components/Footer.js';
 const Home=()=>{  
    return(
@@ -12,8 +8,7 @@ const Home=()=>{
             
             <Navbar />
             <h1>Home</h1> 
-            {/* <PostsList /> */}
-            {/* <Dataa/> */}
+         
             <p>Welcome to Softwallet Algorithms Technologies Pvt Ltd</p>
             <p>At Softwallet Algorithms, we transform ideas into powerful digital products. As a leading software development company, we deliver custom solutions that are scalable, secure, and performance-driven—designed to meet your unique business goals.
 </p>

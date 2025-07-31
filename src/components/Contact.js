@@ -1,120 +1,113 @@
-// import React,{useState} from 'react';
-// import '../css/Login.css';
-// import Navbar from '../components/Navbar.js';
-// import Footer from  '../components/Footer.js';
+import React  from 'react';
+import Navbar from '../components/Navbar.js';
 
-// const Contact=()=>{
-//     const [name,setName]=useState('');
-//              const [email,setEmail]=useState('');
-//              const [tel,setTel]=useState('');
-//              const [password,setPassword]=useState('');
-//              const [error,setError]=useState('');
-//              const handleSubmit=(e)=>{
-//                  e.preventDefault();
-//                  if(email==='user@gmail.com' && password==='password123'){
-//                      alert('Login Successful');
-//                  }else{
-//                      setError('Email or password not correct');
-//                  }
-//              }
-//     return(
-//         <div>
-//             <Navbar />
-// <h1>This the contact page</h1>
-// <div className="container">
-            
-//             <form className="login-form" onSubmit={handleSubmit} method='post'>
-//             <label>Name</label>
-//             <input type="text" value={name} name="name" onChange={(e)=>setName(e.target.value)} required/>
-//                 <label>Email</label>
-//                 <input type="email" value={email} name="email" onChange={(e)=>setEmail(e.target.value)} required/>
-//                 <label>Telephone No</label>
-//                 <input type="tel" value={tel} name="tel" pattern="[0-9]{10}" onChange={(e)=>setTel(e.target.value)} required/>
-//                 <label>Password</label>
-//                 <input type="password" value={password} name="password" onChange={(e)=>setPassword(e.target.value)}required/>
-                
-//                 {error && <p style={{ color: 'red' }}>{error}</p>}
-//                 <button type="submit">Login</button>
+import Footer from  '../components/Footer.js';
+import { useState } from "react";
 
-//             </form>
-//             </div>
-// <Footer />
-//         </div>
-//     );
-// }
-// export default Contact;
-//=============================
+const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
 
-import React from 'react';
-import '../css/Login.css';
-// import {useEffect} from 'react';
-// import { Button } from '../minicomponents/Button.js';
-// import { handleClick } from '../minicomponents/Button.js';
-import { useSelector, useDispatch } from 'react-redux';
-import { setName,setContact,setEmail,setPassword,setCpassword,resetForm} from './authSlice';
-
-import Navbar from './Navbar.js';
-import Footer from  './Footer.js';
-
-
-const Contact=()=>{
-        const name=useSelector((state)=>state.form.name);
-        const contact=useSelector((state)=>state.form.contact);
-        const email=useSelector((state)=>state.form.email);
-        const password=useSelector((state)=>state.form.password);
-        const cpassword=useSelector((state)=>state.form.cpassword);
-        // const submitted = useSelector((state) => state.form.submitted);
-    
-      
-         const dispatch=useDispatch();     
-         
-        //  useEffect(() => {
-        //     if (submitted) {
-        //       dispatch(resetForm());
-        //     }
-        //   }, [submitted, dispatch]);
-
-         const handleSubmit=(e)=>{
-             e.preventDefault();
-            alert('Data submitted');
-         }
-         const handleReset = () => {
-    dispatch(resetForm());
+  const handleChange = (e) => {
+    setFormData({...formData, [e.target.name]: e.target.value});
   };
-    return(
-        <div>
-            <Navbar />
-            {/* <Button onClick={handleClick}
-                         color="blue"
-                         backgroundColor="cyan"
-                         margin="16px"
-                         padding="12px 24px"
-                         label="Not Submit here" /> */}
 
-            <h1>Contact Us</h1>
-            <div className="container">
-            
-            <form className="login-form" onSubmit={handleSubmit} method='post'>
-            <label>Name</label>
-            <input type="text" value={name} name="name" onChange={(e)=>dispatch(setName(e.target.value))} required/>
-            <label>Contact</label>
-            <input type="number" value={contact} name="contact" onChange={(e)=>dispatch(setContact(e.target.value))} required/>
-            
-                <label>Email</label>
-                <input type="email" value={email} name="email" onChange={(e)=>dispatch(setEmail(e.target.value))} required/>
-                
-                <label>Password</label>
-                <input type="password" value={password} name="password" onChange={(e)=>dispatch(setPassword(e.target.value))}required/>
-                <label>Confirm Password</label>
-                <input type="password" value={cpassword} name="password" onChange={(e)=>dispatch(setCpassword(e.target.value))}required/>
-                
-                
-                <button type="submit">Signup</button>  <button type="button" onClick={handleReset}>Reset</button>
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Basic validation
+    if (!formData.name || !formData.email || !formData.message) {
+      alert("Please fill in all required fields.");
+      return;
+    }
 
-            </form>
-            </div>
-            <Footer />
-        </div>
-    );
-}
+    console.log("Submitted Data:", formData);
+    // Here you can send the data to backend or API
+    alert("Message sent!");
+    setFormData({ name: "", email: "", subject: "", message: "" });
+  };
+
+  return (
+    <div>
+        <Navbar />
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-6">
+      <div className="w-full max-w-2xl bg-white shadow-xl rounded-2xl p-8">
+        <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">Contact Us</h2>
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div>
+            <label className="block text-gray-600 mb-1">Full Name</label>
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
+            />
+          </div>
+
+          <div>
+            <label className="block text-gray-600 mb-1">Email</label>
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
+            />
+          </div>
+
+          <div>
+            <label className="block text-gray-600 mb-1">Subject</label>
+            <input
+              type="text"
+              name="subject"
+              value={formData.subject}
+              onChange={handleChange}
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          <div>
+            <label className="block text-gray-600 mb-1">Message</label>
+            <textarea
+              name="message"
+              rows="4"
+              value={formData.message}
+              onChange={handleChange}
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
+            ></textarea>
+          </div>
+
+          <div className="flex justify-between">
+            <button
+              type="submit"
+              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition"
+            >
+              Send Message
+            </button>
+            <button
+              type="reset"
+              onClick={() => setFormData({ name: "", email: "", subject: "", message: "" })}
+              className="bg-gray-300 text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-400 transition"
+            >
+              Reset
+            </button>
+          </div>
+        </form>
+         <Footer/>
+      </div>
+     
+    </div>
+    
+    </div>
+    
+  );
+};
+
 export default Contact;
