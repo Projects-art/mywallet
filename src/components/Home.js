@@ -1,12 +1,14 @@
 import React  from 'react';
-
+import '../css/home.css';
 import Navbar from '../components/Navbar.js';
 import Footer from  '../components/Footer.js';
+
 const Home=()=>{  
    return(
         <div>
             
             <Navbar />
+            <div className="center-container">
             <h1>Home</h1> 
          
             <p>Welcome to Softwallet Algorithms Technologies Pvt Ltd</p>
@@ -68,6 +70,7 @@ Ready to start your digital transformation journey?
 
 👉 [Contact Us] for a free consultation
 👉 [View Our Portfolio] to see our success stories</p>
+</div>
             
             <Footer />
         </div>

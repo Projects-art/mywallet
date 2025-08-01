@@ -1,9 +1,15 @@
 import React from 'react';
 import '../css/contact.css';
+import Navbar from '../components/Navbar.js';
+import Footer from  '../components/Footer.js';
 
 const Contact = () => {
   return (
+    
+      <div>
+        <Navbar/>
     <div className="contact-container">
+      
       <h1 className="contact-title">Contact Us</h1>
       <p className="contact-description">We would love to hear from you. Please fill out the form below.</p>
       
@@ -32,7 +38,10 @@ const Contact = () => {
         <p>Email: contact@example.com</p>
         <p>Address: 123 Main St, City, Country</p>
       </div> */}
+      
     </div>
+    <Footer/>
+  </div>
   );
 };
 

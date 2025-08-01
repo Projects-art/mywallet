@@ -1,4 +1,5 @@
 import React  from 'react';
+import '../css/about.css';
 import Navbar from '../components/Navbar.js';
 // import { handleClick } from '../minicomponents/Button.js';
 // import { Button } from '../minicomponents/Button.js';

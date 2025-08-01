@@ -1,45 +1,37 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../css/Footer.css';
-import {Link} from 'react-router-dom';
-import  './Navbar.css';
 
-const Footer=()=>{
-
-        return(
-       <div className="footer">
-        {/* <nav className="navbar navbar-expand-md navbar-dark bg-dark mb-4 position fixed margin 20px py-3 fixed-bottom"></nav> */}
-             <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed bottom-0 w-full mb-2 py-3">
-                 <div className="container">
-  <Link className="navbar-brand" to="">***</Link>
-  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-    <span className="navbar-toggler-icon"></span>
-  </button>
-  <div className="collapse navbar-collapse" id="navbarCollapse mx-auto">
-    <ul className="navbar-nav ml-auto">
-      <li className="nav-item">
-        <Link className="nav-link" to="">Facebook </Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link" to="">Twitter</Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link" to="">LinkedIn</Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link" to="">Instagram</Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link" to=""> &copy; {new Date().getFullYear()} Softwallet Pvt.Ltd All rights reserved.</Link>
-      </li>
-     
-    </ul>
-         </div>
-         </div>
-         </nav>
-         </div>
-         
-        );
-    }
-
+const Footer = () => {
+  return (
+    
+    <footer className="footer bg-dark text-light fixed-bottom py-4 mb-1">
+      <div className="container text-center">
+         <div className="row justify-content-center">
+        <ul className="list-inline mb-0">
+          <li className="list-inline-item mx-2">
+            <Link className="text-light text-decoration-none" to="">Facebook</Link>
+          </li>
+          <li className="list-inline-item mx-2">
+            <Link className="text-light text-decoration-none" to="">Twitter</Link>
+          </li>
+          <li className="list-inline-item mx-2">
+            <Link className="text-light text-decoration-none" to="">LinkedIn</Link>
+          </li>
+          <li className="list-inline-item mx-2">
+            <Link className="text-light text-decoration-none" to="">Instagram</Link>
+          </li>
+          <li className="list-inline-item mx-2">
+            <Link className="text-light text-decoration-none" to="https://forms.gle/5jcXvkXT1X3JWgE87"> My Cv</Link>
+          </li>
+          <li className="list-inline-item mx-2">
+            <span className="small">&copy; {new Date().getFullYear()} Softwallet Pvt. Ltd.</span>
+          </li>
+        </ul>
+      </div>
+      </div>
+    </footer>
+  );
+};
 
 export default Footer;
