@@ -68,8 +68,8 @@ Database: MongoDB, PostgreSQL, MySQL, Firebase</p>
 <p>📞 Let’s Build Something Great Together
 Ready to start your digital transformation journey?
 
-👉 [Contact Us] for a free consultation
-👉 [View Our Portfolio] to see our success stories</p>
+👉 Contact Us for a free consultation
+👉 View Our Portfolio to see our success stories</p>
 </div>
             
             <Footer />

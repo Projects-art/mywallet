@@ -48,7 +48,7 @@ const Careers=()=>{
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-gray-800 mb-4">Join Our Team</h1>
           <p className="text-gray-600 text-lg">
-            At [Your Company Name], we’re building more than just software — we’re building a culture of innovation, growth, and collaboration.
+            At Softwallet Algorithms, we’re building more than just software — we’re building a culture of innovation, growth, and collaboration.
           </p>
         </div>
 

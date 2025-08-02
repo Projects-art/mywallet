@@ -43,16 +43,11 @@ Proven track record across industries
 
 Support that continues after launch</p>
 <h6>📍 Where We Are Based</h6>
-<p>We operate globally, with our headquarters in [City, Country], and remote teams working across multiple time zones to support clients around the world.</p>
+<p>We operate globally, with our headquarters in Jammu & Kashmir(Srinagar)-India and remote teams working across multiple time zones to support clients around the world.</p>
 <h6>📢 Let’s Collaborate</h6>
-<p>At [Your Company Name], we don’t just write code—we craft digital experiences that create lasting value. Whether you're looking to build a product from scratch, scale your current systems, or explore new technologies, we’re here to help.</p>
-<p>👉 [Get in Touch] with us today to start your journey.</p>
-{/* <Button onClick={handleClick}
-             color="red"
-             backgroundColor="#28a745"
-             margin="16px"
-             padding="12px 24px"
-             label="Submit here" /> */}
+<p>At Softwallet, we don’t just write code—we craft digital experiences that create lasting value. Whether you're looking to build a product from scratch, scale your current systems, or explore new technologies, we’re here to help.</p>
+<p>👉 Get in Touch with us today to start your journey.</p>
+
 
 <Footer />
         </div>
